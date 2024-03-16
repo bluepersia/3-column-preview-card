@@ -1,0 +1,129 @@
+:root {
+    --font-1: "Lexend Deca", sans-serif;
+    --font-2: "Big Shoulders Display", sans-serif;
+
+    --Brightorange: hsl(31, 77%, 52%);
+    --Darkcyan: hsl(184, 100%, 22%);
+    --Verydarkcyan: hsl(179, 100%, 13%);
+    
+    
+    --Transparentwhiteparagraphs: hsla(0, 0%, 100%, 0.75);
+    --Verylightgraybackgroundheadingsbuttons: hsl(0, 0%, 95%);
+}
+
+
+html 
+{
+    font-size: 15px;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2em;
+}
+
+p {
+    line-height: 1.6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+* :first-child {
+    margin-top: 0;
+}
+
+
+* :last-child
+{
+    margin-bottom: 0;
+}
+
+
+.card_section {
+    max-width: 350px;
+    padding: 3em;
+}
+
+.card_sedans {
+    background-color: var(--Brightorange);
+    border-top-left-radius: 14px;
+    border-top-right-radius:14px;
+}
+
+.card_suvs {
+    background-color: var(--Darkcyan);
+}
+
+.card_luxury {
+    background-color: var(--Verydarkcyan);
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+.card_title {
+    color: var(--Verylightgraybackgroundheadingsbuttons);
+    font-family: var(--font-2);
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+.card_body {
+    color: var(--Transparentwhiteparagraphs);
+}
+
+
+.card_btn {
+    margin-top: 6em;
+    padding: .75em 1.5em;
+    border-radius: 20px;
+    font-family: inherit;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.card_btn:hover {
+    background-color: transparent;
+    border: solid 1px white;
+    color: white;
+}
+
+.card_btn-sedans {
+    color: var(--Brightorange);
+}
+
+.card_btn-suvs {
+    color: var(--Darkcyan);
+}
+
+.card_btn-luxury {
+    color: var(--Verydarkcyan);
+}
+
+@media (min-width:768px)
+{
+    .card {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .card_sedans {
+        border-radius: 0;
+        border-top-left-radius: 14px;
+        border-bottom-left-radius: 14px;
+    }
+
+    .card_luxury {
+        border-radius: 0;
+        border-top-right-radius: 14px;
+        border-bottom-right-radius: 14px;
+    }
+}
